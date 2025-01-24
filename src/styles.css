@@ -1,0 +1,294 @@
+/* You can add global styles to this file, and also import other style files */
+body {
+    font-family: 'Times New Roman', serif;
+    color: #333;
+}
+
+.section {
+    padding: 50px 0;
+    text-align: center;
+}
+
+/* Section Background Colors */
+.section-dark {
+    background-color: #333;
+    color: white;
+}
+
+/* Header section */
+.header-section {
+    /* display: flex;
+    justify-content: flex-end; */
+    background-image: url("../public/verina.jpg");
+    background-repeat: no-repeat;
+    /* Prevent the image from repeating */
+    background-position: center 20%;
+    /* Center the image horizontally and vertically */
+    background-size: 50%;
+    /* Make the image cover the entire container */
+    padding: 0;
+    background-color: rgb(247, 247, 247);
+    color: rgb(0, 0, 0);
+}
+
+
+
+.header-section-content {
+    /* display: block; */
+    padding: 100px;
+    text-align: left;
+    /* Align content to the left */
+}
+
+.header-section-content h1 {
+    letter-spacing: 10px;
+    font-size: 6rem;
+    margin-bottom: 5px;
+}
+
+.header-section-content p {
+
+
+
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+/* End Header Section */
+
+/* Button Styles */
+.btn-dark {
+    background-color: #444;
+    color: white;
+    border: 2px solid white;
+    /* Add border around button */
+    padding: 10px 20px;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 0;
+    margin: 10px 0px;
+}
+
+.btn-dark:hover {
+    background-color: #555;
+    /* Slightly lighter on hover */
+    color: white;
+}
+
+
+/* About Me Section */
+.about-me-container {
+    display: flex;
+    align-items: flex-start;
+    padding: 0 100px;
+    /* add side padding */
+}
+
+.about-me-heading {
+    text-align: left;
+    width: 20%;
+    /* Width for left Column */
+}
+
+.about-me-content {
+    text-align: justify;
+    width: 80%;
+    /* Width for the right Column */
+    padding-left: 30px;
+    /* add side padding */
+}
+
+
+
+/* Skills Section */
+.skills-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    /* Remove padding */
+}
+
+.skill-text {
+    padding: 0 100px;
+}
+
+.skill-bar {
+    background-color: #eee;
+    height: 10px;
+    margin: 5px 0;
+    width: 100%;
+    display: flex;
+}
+
+.skill-bar-filled {
+    background-color: rgb(129, 86, 198);
+    height: 100%;
+    display: flex;
+}
+
+.skill-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+
+.skill-item span {
+    width: 40%;
+    text-align: left;
+}
+
+.skill-item .skill-bar {
+    width: 50%;
+}
+
+/* Portfolio */
+.portfolio-heading {
+    text-align: left;
+    padding-left: 100px;
+    /* Indent title */
+}
+
+
+.portfolio-item {
+    width: calc(33.33% - 20px);
+    /* Adjust width and spacing for 3 in a row */
+    margin: 10px;
+    padding: 50px 20px;
+    /* Increase padding */
+    color: #444;
+    text-align: center;
+    display: inline-block;
+    position: relative;
+    border-bottom: 1px solid #444;
+}
+
+.portfolio-item span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.portfolio-item:nth-child(1),
+.portfolio-item:nth-child(3),
+.portfolio-item:nth-child(5) {
+    background-color: #eee;
+    color: #444;
+}
+
+.portfolio-item:nth-child(2),
+.portfolio-item:nth-child(4),
+.portfolio-item:nth-child(6) {
+    background-color: #444;
+    color: white;
+    border-bottom: 1px solid white;
+}
+
+/* Footer Section */
+.footer-section {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 30px 0;
+}
+
+.footer-section-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 100px;
+}
+
+.footer-section .contact-info {
+    text-align: left;
+}
+
+.footer-section .social-icons {
+    text-align: right;
+}
+
+.footer-section .social-icons a {
+    color: white;
+    margin: 0 5px;
+    font-size: 1.2rem;
+}
+
+@media (max-width: 768px) {
+
+    /* Responsive adjustment */
+    .header-section-content {
+        padding: 50px 20px;
+    }
+
+    .about-me-container {
+        flex-direction: column;
+        padding: 0 20px;
+    }
+
+    .about-me-heading,
+    .about-me-content {
+        width: 100%;
+    }
+
+    .skill-text {
+        padding: 0 20px;
+    }
+
+    .skills-container {
+        flex-direction: column;
+        /* Stack items vertically on small screen */
+    }
+
+    .skill-item {
+        flex-direction: column;
+        /* Stack items vertically on small screen */
+        align-items: flex-start;
+        margin-bottom: 20px;
+    }
+
+    .skill-item span,
+    .skill-item .skill-bar {
+        width: 100%;
+    }
+
+    .portfolio-item {
+        width: calc(50% - 20px);
+    }
+
+    .footer-section-content {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 20px;
+    }
+
+    .footer-section .contact-info,
+    .footer-section .social-icons {
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    .portfolio-heading {
+        padding-left: 20px;
+        /* Indent title on small screens */
+    }
+
+    .portfolio-item {
+        width: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 576px) {
+    .portfolio-item {
+        width: calc(100% - 20px);
+        /* One item in row on very small screens */
+    }
+}
+
+
+.card {
+    height: 150px !important;
+    /* overflow: hidden !important; */
+}
